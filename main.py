@@ -19,9 +19,8 @@ client = OneClient(
 comlinkProfile = client.get_profile("email-communication/email-sending")
 use_case = comlinkProfile.get_usecase("SendEmail")
 
+
 # Define the /execute endpoint
-
-
 @app.route("/execute", methods=['POST'])
 def execute_use_case():
 
