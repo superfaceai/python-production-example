@@ -1,5 +1,1 @@
-.env
-DS_STORE
-node_modules/*
-*.txt
-.vscode
+fly.toml
