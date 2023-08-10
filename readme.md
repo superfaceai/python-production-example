@@ -44,7 +44,7 @@ RESEND_TOKEN=
 Run the server:
 
 ```bash
-FLASK_APP=main flask run
+FLASK_APP=server flask run
 ```
 
 This will run the development server using Nodemon on port 5000. The `/execute` endpoint is now available.
@@ -82,7 +82,7 @@ If the request fails, you will get an error response from OneSDK.
 
 ## Deploying to production
 
-If everything works locally, the next step would be to modify any aspects of `main.py` to your liking and deploy it to production.
+If everything works locally, the next step would be to modify any aspects of `server.py` to your liking and deploy it to production.
 
 ### Example - Deploy to Fly.io
 
@@ -100,18 +100,18 @@ Launch a new machine:
 fly launch
 ```
 
+Deploy the app to Fly.io
+
+```bash
+fly deploy
+```
+
 Then, add the content from your `.env` file to the ENV on the server:
 
 ```bash
 fly secrets set SUPERFACE_ONESDK_TOKEN=yourtoken
 
 fly secrets set RESEND_TOKEN=yourresendtoken
-```
-
-Then deploy the app to Fly.io
-
-```bash
-fly deploy
 ```
 
 After a successful deployment you will be able to access the same `/execute` endpoint at:
