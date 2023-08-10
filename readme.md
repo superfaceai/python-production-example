@@ -82,7 +82,7 @@ If the request fails, you will get an error response from OneSDK.
 
 ## Deploying to production
 
-If everything works locally, the next step would be to modify any aspects of `server.mjs` to your liking and deploy it to production.
+If everything works locally, the next step would be to modify any aspects of `main.py` to your liking and deploy it to production.
 
 ### Example - Deploy to Fly.io
 
